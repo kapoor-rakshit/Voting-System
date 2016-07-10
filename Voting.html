@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>Vote Your Leader</title>
+    <script src="vote.js"></script>
+</head>
+
+<body style="text-align:center;background-color:#eeeeff;border-style:dotted;">
+    <h1 style="margin-top:5px;">Leaders WAR-ON</h1>
+    <pre style="font-family:Arial;margin-left:-70px;"><strong>                            1. Select your candidates from the lists.</strong><br>
+            <strong>2. Click on the Submit-Button.</strong></pre>
+    <pre style="font-size:18pt;">Male Leader                         Female Leader</pre>
+    <select id="male" onchange="mfaces()" style="width:100px;margin-left:-20px;cursor:pointer;height:40px;font-size:12pt;" title="Step 1:Click and Choose"
+        autofocus>
+                    <option value=0>Select
+                        <option>
+                    <option value=1>Rakesh
+                      <option value=2>Sunil
+                          <option value=3>Anmol
+                              <option value=4>Prateek
+                                  <option value=5>Paras
+                                      <option value=6>None of the above
+                   </select><select id="female" onchange="ffaces()" style="width:100px;cursor:pointer; margin-left:400px;height:40px;font-size:12pt;"
+        title="Step 1:Click and Choose" autofocus>
+                    <option value=0>Select
+                        <option>
+                    <option value=1>Heenu
+                      <option value=2>Akansha
+                          <option value=3>Vidhi
+                              <option value=4>Swadha
+                                  <option value=5>Mrinali
+                                      <option value=6>None of the above
+                   </select>
+    <br>
+    <img src="back.jpg" id="face" height=200px width=200px>
+    <pre style="margin-top:80px;align:center;">  <button type="button" onclick="res_male()" onmouseup=this.style.background="#ddd" title="Step 2:Click" onmousedown=this.style.background="#00aaff" id="mb" style="height:50px;border-radius:15px;cursor:pointer;border:1px solid black"><b>Submit for Male-Leader<b></button>    <button type="button" onclick="res_female()" onmouseup=this.style.background="#ddd" title="Step 2:Click" onmousedown=this.style.background="#00aaff" id="fb" style="height:50px;cursor:pointer;border:1px solid black;border-radius:15px;"><b>Submit for Female-Leader</b></button>
+                   </pre>
+    <pre style="font-family:Arial;font-size:15pt" id="mres"></pre>
+    <pre style="font-family:Arial;font-size:15pt" id="fres"></pre>
+    <pre>       <input type="password" id="pt" title="Don't type here !!" onfocus=this.value="" placeholder="Enter Password" style="margin-left:150px;text-align:center;cursor:not-allowed;height:40px;font-size:12pt;margin-top:40"></input> <button onclick="valid()" title="Don't Press this !!" style="height:30;cursor:not-allowed;">Submit</button>  <button id="hd" onclick="hide(this)" style="visibility:hidden;height:30;">Hide Results</button>  <button type="button" id="recb" style="height:30;visibility:hidden" onclick="recover()">Recover</button></pre>
+    <br><br>
+    <a download="logcat.txt" id="downloadlink" title="Download the previous results" style="visibility:hidden">Download</a>
+    <br>
+    <button type="button" onclick="display(this)" id="rb" style="margin-top:50px;height:50px;font-size:12pt;border-radius:15px;cursor:pointer;border:3px solid black;visibility:hidden;"><b>Check Result</b></button>
+    <br><br>
+</body>
+
+</html>
+
+<!--To make button visible use style.visibility:hidden or visible-->
+<!--To make button opaque or transparent use style.opacity:0.5-->
