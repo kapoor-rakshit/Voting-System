@@ -1,5 +1,5 @@
-var male = { rakesh: 0, paras: 0, anmol: 0, prateek: 0, sunil: 0 };
-var female = { mrinali: 0, heenu: 0, vidhi: 0, akansha: 0, swadha: 0 };
+var male = {rajpal: 0, rizwan: 0, abhishek: 0, gaurav:0};
+var female = { gaganjot: 0, heenu: 0 };
 window.onload=function() {
   var ad=new Audio("beep-11.mp3");
   ad.play();
@@ -7,11 +7,11 @@ window.onload=function() {
 function res_male() {
   var m = document.getElementById("male");
   var f = document.getElementById("female");
-  if (m.value == 1) male.rakesh++;
-  if (m.value == 2) male.sunil++;
-  if (m.value == 3) male.anmol++;
-  if (m.value == 4) male.prateek++;
-  if (m.value == 5) male.paras++;
+  if (m.value == 2) male.rajpal++;
+  if (m.value == 3) male.rizwan++;
+  if (m.value == 4) male.abhishek++;
+  if (m.value == 5) male.gaurav++;
+  
   var ad=new Audio("beep-02.mp3");
   ad.play();
   setTimeout(gs,80);
@@ -21,10 +21,12 @@ function res_male() {
   m.value=0;
   f.value=0;
   mfaces();
-  
+  var dt=new Date();
+  var dy="";
+  var dy=dt.toLocaleString().toString();
    var val="";
-  val="Rakesh : "+male.rakesh+"  Sunil : "+male.sunil+"  Anmol : "+male.anmol+"  Prateek : "+male.prateek+"  Paras : "+male.paras+"  "+
-  "Heenu : "+female.heenu+"  Akansha : "+female.akansha+"  Vidhi : "+female.vidhi+"  Swadha : "+female.swadha+"  Mrinali : "+female.mrinali;
+  val=dy+"  Rajpal : "+male.rajpal+"  Rizwan : "+male.rizwan+"  Abhishek : "+male.abhishek+"  Gaurav : "+male.gaurav+"   "+
+  "Heenu : "+female.heenu+"  Gaganjot : "+female.gaganjot;
    
    rec(val);
 }
@@ -48,10 +50,8 @@ function res_female() {
   var m = document.getElementById("female");
   var f = document.getElementById("male");
   if (m.value == 1) female.heenu++;
-  if (m.value == 2) female.akansha++;
-  if (m.value == 3) female.vidhi++;
-  if (m.value == 4) female.swadha++;
-  if (m.value == 5) female.mrinali++;
+  if (m.value == 2) female.gaganjot++;
+
   var ad=new Audio("beep-02.mp3");
   ad.play();
   setTimeout(gs,80);
@@ -60,25 +60,23 @@ function res_female() {
   m.value=0;
   f.value=0;
   ffaces();
-  
+  var dt=new Date();
+  var dy="";
+  var dy=dt.toLocaleString().toString();
    var val="";
-  val="Rakesh : "+male.rakesh+"  Sunil : "+male.sunil+"  Anmol : "+male.anmol+"  Prateek : "+male.prateek+"  Paras : "+male.paras+"  "+
-  "Heenu : "+female.heenu+"  Akansha : "+female.akansha+"  Vidhi : "+female.vidhi+"  Swadha : "+female.swadha+"  Mrinali : "+female.mrinali;
+  val=dy+"  Rajpal : "+male.rajpal+"  Rizwan : "+male.rizwan+"  Abhishek : "+male.abhishek+"  Gaurav : "+male.gaurav+"    "+
+  "Heenu : "+female.heenu+"  Gaganjot : "+female.gaganjot;
  
  rec(val);
     }
 function display(i) {
-  document.getElementById("mres").innerHTML = "Rakesh :  " + male.rakesh + "<br>";
-  document.getElementById("mres").innerHTML += "Sunil :      " + male.sunil + "<br>";
-  document.getElementById("mres").innerHTML += "Anmol :   " + male.anmol + "<br>";
-  document.getElementById("mres").innerHTML += "Prateek : " + male.prateek + "<br>";
-  document.getElementById("mres").innerHTML += "Paras :    " + male.paras;
+  document.getElementById("mres").innerHTML = "Rajpal :       " + male.rajpal + "<br>";
+  document.getElementById("mres").innerHTML += "Rizwan :      " + male.rizwan + "<br>";
+  document.getElementById("mres").innerHTML += "Abhishek :  " + male.abhishek + "<br>";
+   document.getElementById("mres").innerHTML += "Gaurav :     " + male.gaurav+ "<br>";
 
-  document.getElementById("fres").innerHTML = "Heenu :     " + female.heenu + "<br>";
-  document.getElementById("fres").innerHTML += "Akansha : " + female.akansha + "<br>";
-  document.getElementById("fres").innerHTML += "Vidhi :       " + female.vidhi + "<br>";
-  document.getElementById("fres").innerHTML += "Swadha :  " + female.swadha + "<br>";
-  document.getElementById("fres").innerHTML += "Mrinali :    " + female.mrinali;
+  document.getElementById("fres").innerHTML = "Heenu :        " + female.heenu + "<br>";
+  document.getElementById("fres").innerHTML += "Gaganjot :    " + female.gaganjot+ "<br>";
   
 }
 function valid(e) {
@@ -112,23 +110,20 @@ function mfaces() {
  m=document.getElementById("male").value;
  i=document.getElementById("face");
  if(m==0) i.src="back.jpg";
- else if(m==1) i.src="rakesh.jpg";
- else if(m==2) i.src="sunil.jpg";
- else if(m==3) i.src="anmol.jpg";
- else if(m==4) i.src="prateek.jpg";
- else if(m==5) i.src="paras.png";
+ else if(m==2) i.src="rajpal.jpg";
+ else if(m==3) i.src="rizwan.jpg";
+ else if(m==4) i.src="abhishek.jpg";
+ else if(m==5) i.src="Gaurav.jpg";  
  else if(m==6) i.src="back.jpg";
 }
 function ffaces() {
  m=document.getElementById("female").value;
  i=document.getElementById("face");
  if(m==0) i.src="back.jpg";
- else if(m==1) i.src="heenu.jpe";
- else if(m==2) i.src="akansha.jpe";
- else if(m==3) i.src="vidhi.jpe";
- else if(m==4) i.src="swadha.jpe";
- else if(m==5) i.src="mrinali.png";
- else if(m==6) i.src="back.jpg";
+ else if(m==1) i.src="heenu.jpg";
+ else if(m==2) i.src="gaganjot.jpg";
+ else if(m==3) i.src="back.jpg";
+
 }
 function rec(val)
 {
